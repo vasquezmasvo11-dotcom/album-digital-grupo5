@@ -94,14 +94,6 @@
                 </div>
             </div>
         </div>
-
-        <div id="mobile-menu" class="hidden md:hidden border-t border-autumn-200 dark:border-autumn-800 bg-autumn-50/95 dark:bg-neutral-900/95 backdrop-blur-md px-4 pt-2 pb-4 space-y-1">
-            <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-autumn-800 dark:text-autumn-200">Home / Cover</a>
-            <a href="#week1" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-autumn-800 dark:text-autumn-200">Week 1 - My Profile</a>
-            <a href="#week2" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-autumn-800 dark:text-autumn-200">Week 2 - My Family</a>
-            <a href="#week3" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-autumn-800 dark:text-autumn-200">Week 3 - My Friends</a>
-            <a href="#week4" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-autumn-800 dark:text-autumn-200">Week 4 - My House & Workspace</a>
-        </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-24">
@@ -123,57 +115,27 @@
                     English Basic Course • Group 5
                 </p>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto my-6 text-left bg-autumn-100/60 dark:bg-autumn-900/40 p-5 rounded-2xl border border-autumn-200/50 dark:border-autumn-800/50">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-pumpkin/10 text-pumpkin flex items-center justify-center font-bold">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs text-autumn-500 uppercase font-bold block">Course</span>
-                            <span class="font-medium text-sm">English Language</span>
-                        </div>
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mt-6">
+                    <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
+                        <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-pumpkin/20 text-pumpkin flex items-center justify-center font-bold text-xs">1</div>
+                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Liliana</h3>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-sage/10 text-sage flex items-center justify-center font-bold">
-                            <i class="fa-solid fa-users"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs text-autumn-500 uppercase font-bold block">Team</span>
-                            <span class="font-medium text-sm">Autonomous Group 5</span>
-                        </div>
+                    <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
+                        <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-sage/20 text-sage flex items-center justify-center font-bold text-xs">2</div>
+                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Jhan Franco</h3>
                     </div>
-                </div>
-
-                <div class="mt-8">
-                    <h2 class="text-xs uppercase font-bold text-autumn-600 dark:text-autumn-400 tracking-widest mb-4">Group Members (Integrantes)</h2>
-                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
-                        <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
-                            <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-pumpkin/20 text-pumpkin flex items-center justify-center font-bold text-xs">1</div>
-                            <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Liliana</h3>
-                        </div>
-                        <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
-                            <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-sage/20 text-sage flex items-center justify-center font-bold text-xs">2</div>
-                            <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Jhan Franco</h3>
-                        </div>
-                        <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
-                            <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-amberGold/20 text-amberGold flex items-center justify-center font-bold text-xs">3</div>
-                            <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Massiel</h3>
-                        </div>
-                        <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
-                            <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-maple/20 text-maple flex items-center justify-center font-bold text-xs">4</div>
-                            <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Ana María</h3>
-                        </div>
-                        <div class="col-span-2 sm:col-span-1 p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
-                            <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-autumn-600/20 text-autumn-600 flex items-center justify-center font-bold text-xs">5</div>
-                            <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Carlos</h3>
-                        </div>
+                    <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
+                        <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-amberGold/20 text-amberGold flex items-center justify-center font-bold text-xs">3</div>
+                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Massiel</h3>
                     </div>
-                </div>
-
-                <div class="mt-8 flex justify-center">
-                    <a href="#week1" class="inline-flex items-center gap-2 bg-gradient-to-r from-pumpkin to-autumn-700 hover:from-autumn-700 hover:to-pumpkin text-white font-semibold px-6 py-3 rounded-2xl shadow-lg transition transform hover:-translate-y-0.5">
-                        Start Exploring Album <i class="fa-solid fa-arrow-down"></i>
-                    </a>
+                    <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
+                        <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-maple/20 text-maple flex items-center justify-center font-bold text-xs">4</div>
+                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Ana María</h3>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1 p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
+                        <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-autumn-600/20 text-autumn-600 flex items-center justify-center font-bold text-xs">5</div>
+                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Carlos</h3>
+                    </div>
                 </div>
             </div>
         </section>
@@ -183,7 +145,7 @@
             <div class="border-l-4 border-pumpkin pl-4 mb-8">
                 <span class="text-xs uppercase font-bold text-pumpkin tracking-widest block">Session 1</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-extrabold">Week 1 - My Profile</h2>
-                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Personal profile cards for each group member with details, origin, and hobbies.</p>
+                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Personal profile cards for each group member with details, photos, and audio.</p>
             </div>
             <div id="w1-profiles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </section>
@@ -193,7 +155,7 @@
             <div class="border-l-4 border-sage pl-4 mb-8">
                 <span class="text-xs uppercase font-bold text-sage tracking-widest block">Session 2</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-extrabold">Week 2 - My Family</h2>
-                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Select a student tab to view their family photo and descriptions.</p>
+                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Select a student tab to view their family photo and audio narration.</p>
             </div>
             <div class="flex flex-wrap gap-2 mb-6 border-b border-autumn-200 dark:border-autumn-800 pb-4" id="w2-tabs"></div>
             <div id="w2-content-container"></div>
@@ -226,11 +188,11 @@
     <footer class="mt-20 border-t border-autumn-200 dark:border-autumn-800 bg-autumn-100/60 dark:bg-neutral-900 py-8 text-center text-xs text-autumn-600 dark:text-autumn-400">
         <div class="max-w-7xl mx-auto px-4 space-y-2">
             <p class="font-serif font-bold text-sm text-autumn-900 dark:text-autumn-200">Digital Album - Universidad Autónoma del Perú</p>
-            <p>English Basic Course • Autonomous Group 5 • Liliana, Jhan Franco, Massiel, Ana María, Carlos</p>
+            <p>English Basic Course • Autonomous Group 5</p>
         </div>
     </footer>
 
-    <!-- LÓGICA DE DATOS Y RENDERIZADO INTERACTIVO -->
+    <!-- LÓGICA DE DATOS CON 20 IMÁGENES Y REPRODUCTORES DE AUDIO -->
     <script>
         const membersData = [
             {
@@ -238,21 +200,25 @@
                 name: "Liliana",
                 w1: {
                     photo: "img/liliana-profile.jpg",
+                    audio: "audio/liliana-w1.mp3",
                     title: "Liliana's Profile",
                     details: ["Hello! I am Liliana.", "I am a student at Universidad Autónoma del Perú.", "I enjoy studying, learning English, and working on group projects."]
                 },
                 w2: {
                     photo: "img/liliana-family.jpg",
+                    audio: "audio/liliana-w2.mp3",
                     title: "Liliana's Family",
                     details: ["This is my family.", "We enjoy spending quality time together during weekends.", "Family support is very important for my academic goals."]
                 },
                 w3: {
                     photo: "img/liliana-friends.jpg",
+                    audio: "audio/liliana-w3.mp3",
                     title: "Liliana's Friends",
                     details: ["Here I am with my close friends.", "We study together and help each other with university assignments.", "We like sharing coffee breaks after long class sessions."]
                 },
                 w4: {
                     photo: "img/liliana-house.jpg",
+                    audio: "audio/liliana-w4.mp3",
                     title: "Liliana's Study Space",
                     details: ["This is my dedicated study area at home.", "It is a quiet and organized place where I attend online classes.", "Having a clean workspace helps me stay focused."]
                 }
@@ -262,21 +228,25 @@
                 name: "Jhan Franco",
                 w1: {
                     photo: "img/jhan-profile.jpg",
+                    audio: "audio/jhan-w1.mp3",
                     title: "Jhan Franco's Profile",
                     details: ["Hi, my name is Jhan Franco.", "I am an enthusiastic university student.", "I like technology, sports, and collaborative team assignments."]
                 },
                 w2: {
                     photo: "img/jhan-family.jpg",
+                    audio: "audio/jhan-w2.mp3",
                     title: "Jhan Franco's Family",
                     details: ["This photo shows our family Sunday lunch.", "We love sharing meal times and catching up on everyone's week.", "My family is my biggest motivation."]
                 },
                 w3: {
                     photo: "img/jhan-friends.jpg",
+                    audio: "audio/jhan-w3.mp3",
                     title: "Jhan Franco's Friends",
                     details: ["Hanging out with my cousins and close friends.", "We share hobbies like gaming and outdoor sports.", "They always bring energy and fun to my life."]
                 },
                 w4: {
                     photo: "img/jhan-house.jpg",
+                    audio: "audio/jhan-w4.mp3",
                     title: "Jhan Franco's Living Room",
                     details: ["This is the main living room in my house.", "It is a comfortable space where my family relaxes together.", "We often watch movies and celebrate events here."]
                 }
@@ -286,21 +256,25 @@
                 name: "Massiel",
                 w1: {
                     photo: "img/massiel-profile.jpg",
+                    audio: "audio/massiel-w1.mp3",
                     title: "Massiel's Profile",
                     details: ["Hello everyone! I am Massiel.", "I am hard-working, creative, and dedicated to my university career.", "I love reading, music, and learning new skills."]
                 },
                 w2: {
                     photo: "img/massiel-family.jpg",
+                    audio: "audio/massiel-w2.mp3",
                     title: "Massiel's Family",
                     details: ["A special moment with my beloved grandparents.", "They teach me valuable life lessons and always support me.", "I treasure every moment spent with them."]
                 },
                 w3: {
                     photo: "img/massiel-friends.jpg",
+                    audio: "audio/massiel-w3.mp3",
                     title: "Massiel's Friends",
                     details: ["An afternoon walk at the park with my friends.", "We love taking pictures and walking outdoors.", "Good friendships make university life much brighter."]
                 },
                 w4: {
                     photo: "img/massiel-house.jpg",
+                    audio: "audio/massiel-w4.mp3",
                     title: "Massiel's Room & Desk",
                     details: ["Here is my bedroom desk setup.", "I keep my notebook, laptop, and study materials organized here.", "It is my favorite spot for reading and doing homework."]
                 }
@@ -310,21 +284,25 @@
                 name: "Ana María",
                 w1: {
                     photo: "img/anamaria-profile.jpg",
+                    audio: "audio/anamaria-w1.mp3",
                     title: "Ana María's Profile",
                     details: ["Hello! My name is Ana María.", "I am studying Nursing at Universidad Autónoma del Perú.", "I am passionate about healthcare and helping people."]
                 },
                 w2: {
                     photo: "img/anamaria-family.jpg",
+                    audio: "audio/anamaria-w2.mp3",
                     title: "Ana María's Family",
                     details: ["This is my mother, Seberina.", "She is an inspiration to me and my main support system.", "We share a very close bond."]
                 },
                 w3: {
                     photo: "img/anamaria-friends.jpg",
+                    audio: "audio/anamaria-w3.mp3",
                     title: "Ana María's Friends",
                     details: ["My fellow nursing classmates and dear friends.", "We practice medical procedures together and review lectures.", "Teamwork is essential in our study routine."]
                 },
                 w4: {
                     photo: "img/anamaria-house.jpg",
+                    audio: "audio/anamaria-w4.mp3",
                     title: "Ana María's Workspace",
                     details: ["This is my study corner inside my bedroom.", "I prepare my clinical notes and review anatomy diagrams here.", "It provides a tranquil atmosphere for deep concentration."]
                 }
@@ -334,21 +312,25 @@
                 name: "Carlos",
                 w1: {
                     photo: "img/carlos-profile.jpg",
+                    audio: "audio/carlos-w1.mp3",
                     title: "Carlos's Profile",
                     details: ["Hi there! I am Carlos.", "I am an active student who enjoys practical learning.", "In my free time, I like playing board games and cooking."]
                 },
                 w2: {
                     photo: "img/carlos-family.jpg",
+                    audio: "audio/carlos-w2.mp3",
                     title: "Carlos's Family",
                     details: ["With my parents, Wiler and Luciana.", "They have always guided me through my education.", "We enjoy weekend family gatherings together."]
                 },
                 w3: {
                     photo: "img/carlos-friends.jpg",
+                    audio: "audio/carlos-w3.mp3",
                     title: "Carlos's Friends",
                     details: ["Playing board games like UNO with my best friends.", "Game nights are our favorite way to unwind after exams.", "We always have a great time competing together."]
                 },
                 w4: {
                     photo: "img/carlos-house.jpg",
+                    audio: "audio/carlos-w4.mp3",
                     title: "Carlos's Kitchen & Dining Area",
                     details: ["This is the kitchen and dining section of my house.", "I like preparing meals here for my family.", "It is a central gathering area in our home."]
                 }
@@ -367,9 +349,17 @@
                         </div>
                         <div class="p-5">
                             <h3 class="font-serif font-bold text-xl text-autumn-900 dark:text-autumn-100 mb-2">${m.name}</h3>
-                            <ul class="space-y-1.5 text-xs text-autumn-700 dark:text-autumn-300">
+                            <ul class="space-y-1.5 text-xs text-autumn-700 dark:text-autumn-300 mb-4">
                                 ${m.w1.details.map(d => `<li class="flex items-start gap-2"><i class="fa-solid fa-angle-right text-pumpkin mt-0.5"></i> <span>${d}</span></li>`).join('')}
                             </ul>
+                            <!-- Reproductor de Audio -->
+                            <div class="mt-3 pt-3 border-t border-autumn-200 dark:border-autumn-800">
+                                <span class="text-[10px] uppercase font-bold text-pumpkin tracking-wider block mb-1"><i class="fa-solid fa-volume-high mr-1"></i> Audio Pronunciation</span>
+                                <audio controls class="w-full h-8 text-xs">
+                                    <source src="${m.w1.audio}" type="audio/mpeg">
+                                    Your browser does not support audio.
+                                </audio>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -401,6 +391,14 @@
                         <ul class="space-y-2 text-sm text-autumn-700 dark:text-autumn-300">
                             ${data.details.map(d => `<li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-sage mt-1"></i> <span>${d}</span></li>`).join('')}
                         </ul>
+                        <!-- Reproductor de Audio para Semanas 2, 3 y 4 -->
+                        <div class="pt-4 border-t border-autumn-200 dark:border-autumn-800">
+                            <span class="text-xs uppercase font-bold text-pumpkin tracking-wider block mb-1.5"><i class="fa-solid fa-volume-high mr-1"></i> Listen to Audio Description</span>
+                            <audio controls class="w-full h-9">
+                                <source src="${data.audio}" type="audio/mpeg">
+                                Your browser does not support audio.
+                            </audio>
+                        </div>
                     </div>
                 </div>
             `;
@@ -419,11 +417,6 @@
             } else {
                 icon.className = 'fa-solid fa-moon';
             }
-        }
-
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
         }
 
         document.addEventListener("DOMContentLoaded", () => {
