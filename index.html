@@ -145,7 +145,7 @@
             <div class="border-l-4 border-pumpkin pl-4 mb-8">
                 <span class="text-xs uppercase font-bold text-pumpkin tracking-widest block">Session 1</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-extrabold">Week 1 - My Profile</h2>
-                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Personal profile cards for each group member with details, photos, and audio.</p>
+                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Personal profile cards for each group member with details and photos.</p>
             </div>
             <div id="w1-profiles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </section>
@@ -155,7 +155,7 @@
             <div class="border-l-4 border-sage pl-4 mb-8">
                 <span class="text-xs uppercase font-bold text-sage tracking-widest block">Session 2</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-extrabold">Week 2 - My Family</h2>
-                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Select a student tab to view their family descriptions and audio narration.</p>
+                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Select a student tab to view their family descriptions.</p>
             </div>
             <div class="flex flex-wrap gap-2 mb-6 border-b border-autumn-200 dark:border-autumn-800 pb-4" id="w2-tabs"></div>
             <div id="w2-content-container"></div>
@@ -192,7 +192,7 @@
         </div>
     </footer>
 
-    <!-- LÓGICA DE DATOS CON TEXTO EXACTO DEL DOCUMENTO, 20 IMÁGENES Y AUDIOS -->
+    <!-- LÓGICA DE DATOS CON TEXTO EXACTO Y RUTAS DE 20 IMÁGENES -->
     <script>
         const membersData = [
             {
@@ -200,7 +200,6 @@
                 name: "Liliana",
                 w1: {
                     photo: "img/liliana-profile.jpg",
-                    audio: "audio/liliana-w1.mp3",
                     title: "Liliana's Profile",
                     details: [
                         "I am a 44-year-old freelancer and psychology student living in the district of Ancón, Lima.",
@@ -212,7 +211,6 @@
                 },
                 w2: {
                     photo: "img/liliana-family.jpg",
-                    audio: "audio/liliana-w2.mp3",
                     title: "Liliana's Family",
                     details: [
                         "My Parents: My father's name is Jose. He is 63 years old and a very hard-working man. My mother's name is Ana. She is 63 years old too, and she is a physical therapist. They are wonderful parents, and they like cooking delicious meals to get the family together on Sundays.",
@@ -221,7 +219,6 @@
                 },
                 w3: {
                     photo: "img/liliana-friends.jpg",
-                    audio: "audio/liliana-w3.mp3",
                     title: "Liliana's Friends",
                     details: [
                         "My Best Friend: My best friend's name is Rocío. She is 44 years old as me, and I know her since we were in kindergarten. She is a loving kindergarten teacher, and she also has two children: a young man and a little boy. Rocío is very friendly, funny, and trustworthy. We enjoy spending time together on weekends at her house or my house.",
@@ -230,7 +227,6 @@
                 },
                 w4: {
                     photo: "img/liliana-house.jpg",
-                    audio: "audio/liliana-w4.mp3",
                     title: "Liliana's House & Favorite Area",
                     details: [
                         "My Apartment: I live in a small apartment. In my house, there are three bedrooms and one bathroom. There is a comfortable living and dining room, a clean kitchen, and a small office space with a desk to do my homework. Finally, on the rooftop, there is a convenient drying area to hang and dry our clothes.",
@@ -243,7 +239,6 @@
                 name: "Carlos",
                 w1: {
                     photo: "img/carlos-profile.jpg",
-                    audio: "audio/carlos-w1.mp3",
                     title: "Carlos's Profile",
                     details: [
                         "Hello! My name is Carlos, and I am 23 years old.",
@@ -255,7 +250,6 @@
                 },
                 w2: {
                     photo: "img/carlos-family.jpg",
-                    audio: "audio/carlos-w2.mp3",
                     title: "Carlos's Family",
                     details: [
                         "My Parents: My father's name is Wiler. He is 49 years old, and he works as a nurse. He is kind, friendly, and cheerful. My mother's name is Luciana, and she is 50 years old. She is a loving, caring, and supportive person. I appreciate both of my parents because they are important to me.",
@@ -264,7 +258,6 @@
                 },
                 w3: {
                     photo: "img/carlos-friends.jpg",
-                    audio: "audio/carlos-w3.mp3",
                     title: "Carlos's Friends",
                     details: [
                         "My Best Friend: My best friend's name is Fernando. He is 48 years old. He is a cool, responsible, hardworking, kind, and funny person. He is friendly and enjoys sharing good moments with others. I appreciate his friendship because he makes people feel comfortable and brings happiness to those around him.",
@@ -273,7 +266,6 @@
                 },
                 w4: {
                     photo: "img/carlos-house.jpg",
-                    audio: "audio/carlos-w4.mp3",
                     title: "Carlos's House & Living Room",
                     details: [
                         "My Home: I live in a comfortable house with different areas for relaxing, preparing meals, and resting. There is a bedroom, a living room, and a kitchen. I believe a home is more than a physical space because it is a place to spend valuable time together.",
@@ -286,7 +278,6 @@
                 name: "Ana María",
                 w1: {
                     photo: "img/anamaria-profile.jpg",
-                    audio: "audio/anamaria-w1.mp3",
                     title: "Ana María's Profile",
                     details: [
                         "I am an 18-year-old nursing student living in Lima, Peru.",
@@ -298,7 +289,6 @@
                 },
                 w2: {
                     photo: "img/anamaria-family.jpg",
-                    audio: "audio/anamaria-w2.mp3",
                     title: "Ana María's Family",
                     details: [
                         "My Mother: My mother's name is Seberina. She is 51 years old, and she is from Trujillo, Peru. She is an important person in my life. I love my mother, and I appreciate everything she does for me.",
@@ -307,7 +297,6 @@
                 },
                 w3: {
                     photo: "img/anamaria-friends.jpg",
-                    audio: "audio/anamaria-w3.mp3",
                     title: "Ana María's Friends",
                     details: [
                         "My Best Friend: My best friend's name is Yadira. She is a kind, friendly, and funny person. We enjoy talking and spending time together. She is an important person in my life, and I appreciate our friendship.",
@@ -316,7 +305,6 @@
                 },
                 w4: {
                     photo: "img/anamaria-house.jpg",
-                    audio: "audio/anamaria-w4.mp3",
                     title: "Ana María's House & Bedroom",
                     details: [
                         "My House: I live in Lima, Peru. My home is a special place for me because I can relax and spend time with my family. It is also a place where I can study and do my homework.",
@@ -329,7 +317,6 @@
                 name: "Massiel",
                 w1: {
                     photo: "img/massiel-profile.jpg",
-                    audio: "audio/massiel-w1.mp3",
                     title: "Massiel's Profile",
                     details: [
                         "Hello! My name is Massiel Xiomara Vasquez Montalvo, and I am 20 years old.",
@@ -341,7 +328,6 @@
                 },
                 w2: {
                     photo: "img/massiel-family.jpg",
-                    audio: "audio/massiel-w2.mp3",
                     title: "Massiel's Family",
                     details: [
                         "My Family & Grandparents: My father's name is Jorge Eduardo, and he is a driver. My mother's name is Ana Paola, and she is a housewife. They are wonderful parents who take care of our home. My grandfather's name is Emiliano Vasquez, and he loves family outings. My grandmother's name is Matilde Piña, and she loves to spoil us.",
@@ -350,7 +336,6 @@
                 },
                 w3: {
                     photo: "img/massiel-friends.jpg",
-                    audio: "audio/massiel-w3.mp3",
                     title: "Massiel's Friends",
                     details: [
                         "My Best Friends: My best friends are Erick and Noemi. Erick has a great sense of humor; he is kind, friendly, and a bit sarcastic, but an amazing friend! Noemi is a very good listener, supportive, and trustworthy. We enjoy spending quality time together.",
@@ -359,7 +344,6 @@
                 },
                 w4: {
                     photo: "img/massiel-house.jpg",
-                    audio: "audio/massiel-w4.mp3",
                     title: "Massiel's House & Living Room",
                     details: [
                         "My Home: I live in a small but very cozy house. In my house, there are bedrooms, a bathroom, a clean kitchen, and a living room. There is also a small study area with a desk to do my homework and study Systems Engineering.",
@@ -372,7 +356,6 @@
                 name: "Jhan Franco",
                 w1: {
                     photo: "img/jhan-profile.jpg",
-                    audio: "audio/jhan-w1.mp3",
                     title: "Jhan Franco's Profile",
                     details: [
                         "Hi, my name is Jhan Franco.",
@@ -383,7 +366,6 @@
                 },
                 w2: {
                     photo: "img/jhan-family.jpg",
-                    audio: "audio/jhan-w2.mp3",
                     title: "Jhan Franco's Family",
                     details: [
                         "Sunday Lunch: This photo shows our family Sunday lunch.",
@@ -392,7 +374,6 @@
                 },
                 w3: {
                     photo: "img/jhan-friends.jpg",
-                    audio: "audio/jhan-w3.mp3",
                     title: "Jhan Franco's Friends",
                     details: [
                         "Cousins & Friends: Hanging out with my cousins and close friends.",
@@ -401,7 +382,6 @@
                 },
                 w4: {
                     photo: "img/jhan-house.jpg",
-                    audio: "audio/jhan-w4.mp3",
                     title: "Jhan Franco's Living Room",
                     details: [
                         "Living Room: This is the main living room in my house.",
@@ -423,16 +403,9 @@
                         </div>
                         <div class="p-5">
                             <h3 class="font-serif font-bold text-xl text-autumn-900 dark:text-autumn-100 mb-2">${m.name}</h3>
-                            <ul class="space-y-2 text-xs text-autumn-700 dark:text-autumn-300 mb-4">
+                            <ul class="space-y-2 text-xs text-autumn-700 dark:text-autumn-300">
                                 ${m.w1.details.map(d => `<li class="flex items-start gap-2"><i class="fa-solid fa-angle-right text-pumpkin mt-0.5 shrink-0"></i> <span>${d}</span></li>`).join('')}
                             </ul>
-                            <div class="mt-3 pt-3 border-t border-autumn-200 dark:border-autumn-800">
-                                <span class="text-[10px] uppercase font-bold text-pumpkin tracking-wider block mb-1"><i class="fa-solid fa-volume-high mr-1"></i> Audio Pronunciation</span>
-                                <audio controls class="w-full h-8 text-xs">
-                                    <source src="${m.w1.audio}" type="audio/mpeg">
-                                    Your browser does not support audio.
-                                </audio>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -464,13 +437,6 @@
                         <ul class="space-y-3 text-sm text-autumn-700 dark:text-autumn-300">
                             ${data.details.map(d => `<li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-sage mt-1 shrink-0"></i> <span>${d}</span></li>`).join('')}
                         </ul>
-                        <div class="pt-4 border-t border-autumn-200 dark:border-autumn-800">
-                            <span class="text-xs uppercase font-bold text-pumpkin tracking-wider block mb-1.5"><i class="fa-solid fa-volume-high mr-1"></i> Listen to Audio Description</span>
-                            <audio controls class="w-full h-9">
-                                <source src="${data.audio}" type="audio/mpeg">
-                                Your browser does not support audio.
-                            </audio>
-                        </div>
                     </div>
                 </div>
             `;
