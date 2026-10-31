@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Album - English Basic Course - Group 5</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Poppins & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        autumn: {
+                            50: '#fdfbf7',
+                            100: '#f7f2e7',
+                            200: '#eee0cc',
+                            300: '#e0c7a5',
+                            400: '#cb9b65',
+                            500: '#be7839',
+                            600: '#a75a2d',
+                            700: '#8b4327',
+                            800: '#713624',
+                            900: '#5c2d20',
+                        },
+                        maple: '#902923',
+                        pumpkin: '#d96b27',
+                        amberGold: '#e39f38',
+                        sage: '#6b7a59',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(224, 199, 165, 0.4);
+        }
+        .dark .glass-card {
+            background: rgba(40, 24, 18, 0.88);
+            border: 1px solid rgba(139, 67, 39, 0.3);
+        }
+        .tab-btn.active {
+            background-color: #d96b27 !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 6px -1px rgba(217, 107, 39, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-autumn-50 dark:bg-neutral-950 text-autumn-900 dark:text-autumn-100 font-sans transition-colors duration-300 min-h-screen relative overflow-x-hidden">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 glass-card border-b border-autumn-200 dark:border-autumn-800 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-pumpkin to-maple flex items-center justify-center text-white shadow-md transform group-hover:rotate-12 transition-transform duration-300">
+                        <i class="fa-solid fa-leaf text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl font-bold text-autumn-800 dark:text-autumn-200 tracking-wide block leading-none">English Album</span>
+                        <span class="text-xs text-autumn-600 dark:text-autumn-400 font-medium">Autónoma - Group 5</span>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex space-x-1 lg:space-x-2">
+                    <a href="#home" class="px-3 py-2 rounded-lg text-sm font-semibold text-autumn-700 dark:text-autumn-300 hover:bg-autumn-200/50 dark:hover:bg-autumn-800/50 transition">Home</a>
+                    <a href="#week1" class="px-3 py-2 rounded-lg text-sm font-semibold text-autumn-700 dark:text-autumn-300 hover:bg-autumn-200/50 dark:hover:bg-autumn-800/50 transition">Week 1</a>
+                    <a href="#week2" class="px-3 py-2 rounded-lg text-sm font-semibold text-autumn-700 dark:text-autumn-300 hover:bg-autumn-200/50 dark:hover:bg-autumn-800/50 transition">Week 2</a>
+                    <a href="#week3" class="px-3 py-2 rounded-lg text-sm font-semibold text-autumn-700 dark:text-autumn-300 hover:bg-autumn-200/50 dark:hover:bg-autumn-800/50 transition">Week 3</a>
+                    <a href="#week4" class="px-3 py-2 rounded-lg text-sm font-semibold text-autumn-700 dark:text-autumn-300 hover:bg-autumn-200/50 dark:hover:bg-autumn-800/50 transition">Week 4</a>
+                </nav>
+
+                <div class="flex items-center gap-2">
+                    <button onclick="toggleDarkMode()" title="Toggle Theme" class="p-2.5 text-autumn-700 dark:text-autumn-300 hover:bg-autumn-200/60 dark:hover:bg-autumn-800/60 rounded-xl transition">
+                        <i id="theme-icon" class="fa-solid fa-moon"></i>
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-autumn-800 dark:text-autumn-200 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-autumn-200 dark:border-autumn-800 bg-autumn-50/95 dark:bg-neutral-900/95 backdrop-blur-md px-4 pt-2 pb-4 space-y-1">
+            <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-autumn-800 dark:text-autumn-200">Home / Cover</a>
+            <a href="#week1" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-autumn-800 dark:text-autumn-200">Week 1 - My Profile</a>
+            <a href="#week2" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-autumn-800 dark:text-autumn-200">Week 2 - My Family</a>
+            <a href="#week3" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-autumn-800 dark:text-autumn-200">Week 3 - My Friends</a>
+            <a href="#week4" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-autumn-800 dark:text-autumn-200">Week 4 - My House & Workspace</a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-24">
+
+        <!-- 1. COVER PAGE / HOME SECTION -->
+        <section id="home" class="min-h-[70vh] flex flex-col justify-center items-center text-center relative py-8">
+            <div class="glass-card w-full max-w-4xl p-8 sm:p-12 rounded-3xl shadow-xl relative overflow-hidden border border-autumn-300/60 dark:border-autumn-700/60">
+                <div class="absolute top-0 left-0 right-0 h-3 bg-gradient-to-r from-pumpkin via-amberGold to-maple"></div>
+
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-autumn-200/80 dark:bg-autumn-800/80 text-autumn-800 dark:text-autumn-200 font-semibold text-xs uppercase tracking-wider mb-6">
+                    <i class="fa-solid fa-graduation-cap text-pumpkin"></i> Universidad Autónoma del Perú
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-6xl font-extrabold text-autumn-900 dark:text-autumn-50 tracking-tight mb-3">
+                    Digital Album
+                </h1>
+                
+                <p class="text-xl sm:text-2xl font-serif italic text-pumpkin dark:text-amberGold mb-6">
+                    English Basic Course • Group 5
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto my-6 text-left bg-autumn-100/60 dark:bg-autumn-900/40 p-5 rounded-2xl border border-autumn-200/50 dark:border-autumn-800/50">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-pumpkin/10 text-pumpkin flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-autumn-500 uppercase font-bold block">Course</span>
+                            <span class="font-medium text-sm">English Language</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sage/10 text-sage flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-autumn-500 uppercase font-bold block">Team</span>
+                            <span class="font-medium text-sm">Autonomous Group 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h2 class="text-xs uppercase font-bold text-autumn-600 dark:text-autumn-400 tracking-widest mb-4">Group Members (Integrantes)</h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                        <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
+                            <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-pumpkin/20 text-pumpkin flex items-center justify-center font-bold text-xs">1</div>
+                            <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Liliana</h3>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
+                            <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-sage/20 text-sage flex items-center justify-center font-bold text-xs">2</div>
+                            <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Jhan Franco</h3>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
+                            <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-amberGold/20 text-amberGold flex items-center justify-center font-bold text-xs">3</div>
+                            <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Massiel</h3>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
+                            <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-maple/20 text-maple flex items-center justify-center font-bold text-xs">4</div>
+                            <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Ana María</h3>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
+                            <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-autumn-600/20 text-autumn-600 flex items-center justify-center font-bold text-xs">5</div>
+                            <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Carlos</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex justify-center">
+                    <a href="#week1" class="inline-flex items-center gap-2 bg-gradient-to-r from-pumpkin to-autumn-700 hover:from-autumn-700 hover:to-pumpkin text-white font-semibold px-6 py-3 rounded-2xl shadow-lg transition transform hover:-translate-y-0.5">
+                        Start Exploring Album <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. WEEK 1: MY PROFILE -->
+        <section id="week1" class="pt-8">
+            <div class="border-l-4 border-pumpkin pl-4 mb-8">
+                <span class="text-xs uppercase font-bold text-pumpkin tracking-widest block">Session 1</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold">Week 1 - My Profile</h2>
+                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Personal profile cards for each group member with details, origin, and hobbies.</p>
+            </div>
+            <div id="w1-profiles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </section>
+
+        <!-- 3. WEEK 2: MY FAMILY -->
+        <section id="week2" class="pt-8">
+            <div class="border-l-4 border-sage pl-4 mb-8">
+                <span class="text-xs uppercase font-bold text-sage tracking-widest block">Session 2</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold">Week 2 - My Family</h2>
+                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Select a student tab to view their family photo and descriptions.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6 border-b border-autumn-200 dark:border-autumn-800 pb-4" id="w2-tabs"></div>
+            <div id="w2-content-container"></div>
+        </section>
+
+        <!-- 4. WEEK 3: MY FRIENDS -->
+        <section id="week3" class="pt-8">
+            <div class="border-l-4 border-amberGold pl-4 mb-8">
+                <span class="text-xs uppercase font-bold text-amberGold tracking-widest block">Session 3</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold">Week 3 - My Friends</h2>
+                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Select a student tab to view their close friends and companions.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6 border-b border-autumn-200 dark:border-autumn-800 pb-4" id="w3-tabs"></div>
+            <div id="w3-content-container"></div>
+        </section>
+
+        <!-- 5. WEEK 4: MY HOUSE & WORKSPACE -->
+        <section id="week4" class="pt-8">
+            <div class="border-l-4 border-maple pl-4 mb-8">
+                <span class="text-xs uppercase font-bold text-maple tracking-widest block">Session 4</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold">Week 4 - My House & Workspace</h2>
+                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Descriptions of study areas, home environments, and furniture.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6 border-b border-autumn-200 dark:border-autumn-800 pb-4" id="w4-tabs"></div>
+            <div id="w4-content-container"></div>
+        </section>
+
+    </main>
+
+    <footer class="mt-20 border-t border-autumn-200 dark:border-autumn-800 bg-autumn-100/60 dark:bg-neutral-900 py-8 text-center text-xs text-autumn-600 dark:text-autumn-400">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p class="font-serif font-bold text-sm text-autumn-900 dark:text-autumn-200">Digital Album - Universidad Autónoma del Perú</p>
+            <p>English Basic Course • Autonomous Group 5 • Liliana, Jhan Franco, Massiel, Ana María, Carlos</p>
+        </div>
+    </footer>
+
+    <!-- LÓGICA DE DATOS Y RENDERIZADO INTERACTIVO -->
+    <script>
+        const membersData = [
+            {
+                id: "liliana",
+                name: "Liliana",
+                w1: {
+                    photo: "img/liliana-profile.jpg",
+                    title: "Liliana's Profile",
+                    details: ["Hello! I am Liliana.", "I am a student at Universidad Autónoma del Perú.", "I enjoy studying, learning English, and working on group projects."]
+                },
+                w2: {
+                    photo: "img/liliana-family.jpg",
+                    title: "Liliana's Family",
+                    details: ["This is my family.", "We enjoy spending quality time together during weekends.", "Family support is very important for my academic goals."]
+                },
+                w3: {
+                    photo: "img/liliana-friends.jpg",
+                    title: "Liliana's Friends",
+                    details: ["Here I am with my close friends.", "We study together and help each other with university assignments.", "We like sharing coffee breaks after long class sessions."]
+                },
+                w4: {
+                    photo: "img/liliana-house.jpg",
+                    title: "Liliana's Study Space",
+                    details: ["This is my dedicated study area at home.", "It is a quiet and organized place where I attend online classes.", "Having a clean workspace helps me stay focused."]
+                }
+            },
+            {
+                id: "jhan",
+                name: "Jhan Franco",
+                w1: {
+                    photo: "img/jhan-profile.jpg",
+                    title: "Jhan Franco's Profile",
+                    details: ["Hi, my name is Jhan Franco.", "I am an enthusiastic university student.", "I like technology, sports, and collaborative team assignments."]
+                },
+                w2: {
+                    photo: "img/jhan-family.jpg",
+                    title: "Jhan Franco's Family",
+                    details: ["This photo shows our family Sunday lunch.", "We love sharing meal times and catching up on everyone's week.", "My family is my biggest motivation."]
+                },
+                w3: {
+                    photo: "img/jhan-friends.jpg",
+                    title: "Jhan Franco's Friends",
+                    details: ["Hanging out with my cousins and close friends.", "We share hobbies like gaming and outdoor sports.", "They always bring energy and fun to my life."]
+                },
+                w4: {
+                    photo: "img/jhan-house.jpg",
+                    title: "Jhan Franco's Living Room",
+                    details: ["This is the main living room in my house.", "It is a comfortable space where my family relaxes together.", "We often watch movies and celebrate events here."]
+                }
+            },
+            {
+                id: "massiel",
+                name: "Massiel",
+                w1: {
+                    photo: "img/massiel-profile.jpg",
+                    title: "Massiel's Profile",
+                    details: ["Hello everyone! I am Massiel.", "I am hard-working, creative, and dedicated to my university career.", "I love reading, music, and learning new skills."]
+                },
+                w2: {
+                    photo: "img/massiel-family.jpg",
+                    title: "Massiel's Family",
+                    details: ["A special moment with my beloved grandparents.", "They teach me valuable life lessons and always support me.", "I treasure every moment spent with them."]
+                },
+                w3: {
+                    photo: "img/massiel-friends.jpg",
+                    title: "Massiel's Friends",
+                    details: ["An afternoon walk at the park with my friends.", "We love taking pictures and walking outdoors.", "Good friendships make university life much brighter."]
+                },
+                w4: {
+                    photo: "img/massiel-house.jpg",
+                    title: "Massiel's Room & Desk",
+                    details: ["Here is my bedroom desk setup.", "I keep my notebook, laptop, and study materials organized here.", "It is my favorite spot for reading and doing homework."]
+                }
+            },
+            {
+                id: "anamaria",
+                name: "Ana María",
+                w1: {
+                    photo: "img/anamaria-profile.jpg",
+                    title: "Ana María's Profile",
+                    details: ["Hello! My name is Ana María.", "I am studying Nursing at Universidad Autónoma del Perú.", "I am passionate about healthcare and helping people."]
+                },
+                w2: {
+                    photo: "img/anamaria-family.jpg",
+                    title: "Ana María's Family",
+                    details: ["This is my mother, Seberina.", "She is an inspiration to me and my main support system.", "We share a very close bond."]
+                },
+                w3: {
+                    photo: "img/anamaria-friends.jpg",
+                    title: "Ana María's Friends",
+                    details: ["My fellow nursing classmates and dear friends.", "We practice medical procedures together and review lectures.", "Teamwork is essential in our study routine."]
+                },
+                w4: {
+                    photo: "img/anamaria-house.jpg",
+                    title: "Ana María's Workspace",
+                    details: ["This is my study corner inside my bedroom.", "I prepare my clinical notes and review anatomy diagrams here.", "It provides a tranquil atmosphere for deep concentration."]
+                }
+            },
+            {
+                id: "carlos",
+                name: "Carlos",
+                w1: {
+                    photo: "img/carlos-profile.jpg",
+                    title: "Carlos's Profile",
+                    details: ["Hi there! I am Carlos.", "I am an active student who enjoys practical learning.", "In my free time, I like playing board games and cooking."]
+                },
+                w2: {
+                    photo: "img/carlos-family.jpg",
+                    title: "Carlos's Family",
+                    details: ["With my parents, Wiler and Luciana.", "They have always guided me through my education.", "We enjoy weekend family gatherings together."]
+                },
+                w3: {
+                    photo: "img/carlos-friends.jpg",
+                    title: "Carlos's Friends",
+                    details: ["Playing board games like UNO with my best friends.", "Game nights are our favorite way to unwind after exams.", "We always have a great time competing together."]
+                },
+                w4: {
+                    photo: "img/carlos-house.jpg",
+                    title: "Carlos's Kitchen & Dining Area",
+                    details: ["This is the kitchen and dining section of my house.", "I like preparing meals here for my family.", "It is a central gathering area in our home."]
+                }
+            }
+        ];
+
+        let activeTabs = { w2: 0, w3: 0, w4: 0 };
+
+        function renderWeek1() {
+            const container = document.getElementById("w1-profiles-container");
+            container.innerHTML = membersData.map(m => `
+                <div class="glass-card rounded-2xl overflow-hidden shadow-md border border-autumn-200/80 dark:border-autumn-800 flex flex-col justify-between">
+                    <div>
+                        <div class="h-64 bg-autumn-200/50 dark:bg-neutral-900 overflow-hidden relative">
+                            <img src="${m.w1.photo}" alt="${m.name}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80';" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-xl text-autumn-900 dark:text-autumn-100 mb-2">${m.name}</h3>
+                            <ul class="space-y-1.5 text-xs text-autumn-700 dark:text-autumn-300">
+                                ${m.w1.details.map(d => `<li class="flex items-start gap-2"><i class="fa-solid fa-angle-right text-pumpkin mt-0.5"></i> <span>${d}</span></li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderTabbedSection(weekKey, containerId, tabsId) {
+            const tabsContainer = document.getElementById(tabsId);
+            const contentContainer = document.getElementById(containerId);
+            const activeIndex = activeTabs[weekKey];
+
+            tabsContainer.innerHTML = membersData.map((m, idx) => `
+                <button onclick="switchTab('${weekKey}', ${idx})" class="tab-btn ${idx === activeIndex ? 'active' : ''} px-4 py-2 rounded-xl text-xs font-bold transition border border-autumn-300 dark:border-autumn-700 bg-autumn-100/50 dark:bg-neutral-800">
+                    ${m.name}
+                </button>
+            `).join('');
+
+            const currentMember = membersData[activeIndex];
+            const data = currentMember[weekKey];
+
+            contentContainer.innerHTML = `
+                <div class="glass-card rounded-2xl p-6 border border-autumn-300/60 dark:border-autumn-700/60 shadow-lg grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                    <div class="md:col-span-6 h-72 rounded-xl overflow-hidden bg-autumn-200/40 dark:bg-neutral-900">
+                        <img src="${data.photo}" alt="${data.title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80';" />
+                    </div>
+                    <div class="md:col-span-6 space-y-4">
+                        <span class="text-xs font-bold text-pumpkin uppercase tracking-widest">${currentMember.name}</span>
+                        <h3 class="font-serif text-2xl font-bold text-autumn-900 dark:text-autumn-100">${data.title}</h3>
+                        <ul class="space-y-2 text-sm text-autumn-700 dark:text-autumn-300">
+                            ${data.details.map(d => `<li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-sage mt-1"></i> <span>${d}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+        }
+
+        function switchTab(weekKey, idx) {
+            activeTabs[weekKey] = idx;
+            renderTabbedSection(weekKey, `${weekKey}-content-container`, `${weekKey}-tabs`);
+        }
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const icon = document.getElementById('theme-icon');
+            if (document.documentElement.classList.contains('dark')) {
+                icon.className = 'fa-solid fa-sun';
+            } else {
+                icon.className = 'fa-solid fa-moon';
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            renderWeek1();
+            renderTabbedSection('w2', 'w2-content-container', 'w2-tabs');
+            renderTabbedSection('w3', 'w3-content-container', 'w3-tabs');
+            renderTabbedSection('w4', 'w4-content-container', 'w4-tabs');
+        });
+    </script>
+</body>
+</html>
