@@ -122,19 +122,19 @@
                     </div>
                     <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
                         <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-sage/20 text-sage flex items-center justify-center font-bold text-xs">2</div>
-                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Jhan Franco</h3>
+                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Carlos</h3>
                     </div>
                     <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
                         <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-amberGold/20 text-amberGold flex items-center justify-center font-bold text-xs">3</div>
-                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Massiel</h3>
+                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Ana María</h3>
                     </div>
                     <div class="p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
                         <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-maple/20 text-maple flex items-center justify-center font-bold text-xs">4</div>
-                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Ana María</h3>
+                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Massiel</h3>
                     </div>
                     <div class="col-span-2 sm:col-span-1 p-3 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-autumn-200 dark:border-autumn-800 text-center shadow-sm">
                         <div class="w-8 h-8 mx-auto mb-1.5 rounded-full bg-autumn-600/20 text-autumn-600 flex items-center justify-center font-bold text-xs">5</div>
-                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Carlos</h3>
+                        <h3 class="font-semibold text-xs text-autumn-900 dark:text-autumn-100 truncate">Jhan Franco</h3>
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@
             <div class="border-l-4 border-sage pl-4 mb-8">
                 <span class="text-xs uppercase font-bold text-sage tracking-widest block">Session 2</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-extrabold">Week 2 - My Family</h2>
-                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Select a student tab to view their family photo and audio narration.</p>
+                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Select a student tab to view their family descriptions and audio narration.</p>
             </div>
             <div class="flex flex-wrap gap-2 mb-6 border-b border-autumn-200 dark:border-autumn-800 pb-4" id="w2-tabs"></div>
             <div id="w2-content-container"></div>
@@ -166,7 +166,7 @@
             <div class="border-l-4 border-amberGold pl-4 mb-8">
                 <span class="text-xs uppercase font-bold text-amberGold tracking-widest block">Session 3</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-extrabold">Week 3 - My Friends</h2>
-                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Select a student tab to view their close friends and companions.</p>
+                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Select a student tab to view their best friends and study team companions.</p>
             </div>
             <div class="flex flex-wrap gap-2 mb-6 border-b border-autumn-200 dark:border-autumn-800 pb-4" id="w3-tabs"></div>
             <div id="w3-content-container"></div>
@@ -177,7 +177,7 @@
             <div class="border-l-4 border-maple pl-4 mb-8">
                 <span class="text-xs uppercase font-bold text-maple tracking-widest block">Session 4</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-extrabold">Week 4 - My House & Workspace</h2>
-                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Descriptions of study areas, home environments, and furniture.</p>
+                <p class="text-autumn-600 dark:text-autumn-400 text-sm mt-1">Descriptions of home environments, favorite spaces, and furniture.</p>
             </div>
             <div class="flex flex-wrap gap-2 mb-6 border-b border-autumn-200 dark:border-autumn-800 pb-4" id="w4-tabs"></div>
             <div id="w4-content-container"></div>
@@ -192,7 +192,7 @@
         </div>
     </footer>
 
-    <!-- LÓGICA DE DATOS CON 20 IMÁGENES Y REPRODUCTORES DE AUDIO -->
+    <!-- LÓGICA DE DATOS CON TEXTO EXACTO DEL DOCUMENTO, 20 IMÁGENES Y AUDIOS -->
     <script>
         const membersData = [
             {
@@ -202,109 +202,40 @@
                     photo: "img/liliana-profile.jpg",
                     audio: "audio/liliana-w1.mp3",
                     title: "Liliana's Profile",
-                    details: ["Hello! I am Liliana.", "I am a student at Universidad Autónoma del Perú.", "I enjoy studying, learning English, and working on group projects."]
+                    details: [
+                        "I am a 44-year-old freelancer and psychology student living in the district of Ancón, Lima.",
+                        "I am also a proud mother of two young children who inspire me every day.",
+                        "I run a business where I design and sell personalized items.",
+                        "I am interested in traveling, and listening to music.",
+                        "I always strive to balance continuous learning, creativity, and family life."
+                    ]
                 },
                 w2: {
                     photo: "img/liliana-family.jpg",
                     audio: "audio/liliana-w2.mp3",
                     title: "Liliana's Family",
-                    details: ["This is my family.", "We enjoy spending quality time together during weekends.", "Family support is very important for my academic goals."]
+                    details: [
+                        "My Parents: My father's name is Jose. He is 63 years old and a very hard-working man. My mother's name is Ana. She is 63 years old too, and she is a physical therapist. They are wonderful parents, and they like cooking delicious meals to get the family together on Sundays.",
+                        "My Own Family: I am married, and my husband is a computer technician. He is very intelligent and kind. We have two wonderful children. My oldest son has curly hair and wears glasses, and my youngest son is a student. On Sundays, we love to get the family together with my parents, brothers and sisters in law to have a special lunch and share quality time."
+                    ]
                 },
                 w3: {
                     photo: "img/liliana-friends.jpg",
                     audio: "audio/liliana-w3.mp3",
                     title: "Liliana's Friends",
-                    details: ["Here I am with my close friends.", "We study together and help each other with university assignments.", "We like sharing coffee breaks after long class sessions."]
+                    details: [
+                        "My Best Friend: My best friend's name is Rocío. She is 44 years old as me, and I know her since we were in kindergarten. She is a loving kindergarten teacher, and she also has two children: a young man and a little boy. Rocío is very friendly, funny, and trustworthy. We enjoy spending time together on weekends at her house or my house.",
+                        "Group 5 Team: In Group 5, I study with Massiel, Ana, Jhan and Carlos. We are a good team. Everyone is very responsible, creative, and supportive. We help each other prepare for our English lessons, and we always practice speaking together to get excellent grades."
+                    ]
                 },
                 w4: {
                     photo: "img/liliana-house.jpg",
                     audio: "audio/liliana-w4.mp3",
-                    title: "Liliana's Study Space",
-                    details: ["This is my dedicated study area at home.", "It is a quiet and organized place where I attend online classes.", "Having a clean workspace helps me stay focused."]
-                }
-            },
-            {
-                id: "jhan",
-                name: "Jhan Franco",
-                w1: {
-                    photo: "img/jhan-profile.jpg",
-                    audio: "audio/jhan-w1.mp3",
-                    title: "Jhan Franco's Profile",
-                    details: ["Hi, my name is Jhan Franco.", "I am an enthusiastic university student.", "I like technology, sports, and collaborative team assignments."]
-                },
-                w2: {
-                    photo: "img/jhan-family.jpg",
-                    audio: "audio/jhan-w2.mp3",
-                    title: "Jhan Franco's Family",
-                    details: ["This photo shows our family Sunday lunch.", "We love sharing meal times and catching up on everyone's week.", "My family is my biggest motivation."]
-                },
-                w3: {
-                    photo: "img/jhan-friends.jpg",
-                    audio: "audio/jhan-w3.mp3",
-                    title: "Jhan Franco's Friends",
-                    details: ["Hanging out with my cousins and close friends.", "We share hobbies like gaming and outdoor sports.", "They always bring energy and fun to my life."]
-                },
-                w4: {
-                    photo: "img/jhan-house.jpg",
-                    audio: "audio/jhan-w4.mp3",
-                    title: "Jhan Franco's Living Room",
-                    details: ["This is the main living room in my house.", "It is a comfortable space where my family relaxes together.", "We often watch movies and celebrate events here."]
-                }
-            },
-            {
-                id: "massiel",
-                name: "Massiel",
-                w1: {
-                    photo: "img/massiel-profile.jpg",
-                    audio: "audio/massiel-w1.mp3",
-                    title: "Massiel's Profile",
-                    details: ["Hello everyone! I am Massiel.", "I am hard-working, creative, and dedicated to my university career.", "I love reading, music, and learning new skills."]
-                },
-                w2: {
-                    photo: "img/massiel-family.jpg",
-                    audio: "audio/massiel-w2.mp3",
-                    title: "Massiel's Family",
-                    details: ["A special moment with my beloved grandparents.", "They teach me valuable life lessons and always support me.", "I treasure every moment spent with them."]
-                },
-                w3: {
-                    photo: "img/massiel-friends.jpg",
-                    audio: "audio/massiel-w3.mp3",
-                    title: "Massiel's Friends",
-                    details: ["An afternoon walk at the park with my friends.", "We love taking pictures and walking outdoors.", "Good friendships make university life much brighter."]
-                },
-                w4: {
-                    photo: "img/massiel-house.jpg",
-                    audio: "audio/massiel-w4.mp3",
-                    title: "Massiel's Room & Desk",
-                    details: ["Here is my bedroom desk setup.", "I keep my notebook, laptop, and study materials organized here.", "It is my favorite spot for reading and doing homework."]
-                }
-            },
-            {
-                id: "anamaria",
-                name: "Ana María",
-                w1: {
-                    photo: "img/anamaria-profile.jpg",
-                    audio: "audio/anamaria-w1.mp3",
-                    title: "Ana María's Profile",
-                    details: ["Hello! My name is Ana María.", "I am studying Nursing at Universidad Autónoma del Perú.", "I am passionate about healthcare and helping people."]
-                },
-                w2: {
-                    photo: "img/anamaria-family.jpg",
-                    audio: "audio/anamaria-w2.mp3",
-                    title: "Ana María's Family",
-                    details: ["This is my mother, Seberina.", "She is an inspiration to me and my main support system.", "We share a very close bond."]
-                },
-                w3: {
-                    photo: "img/anamaria-friends.jpg",
-                    audio: "audio/anamaria-w3.mp3",
-                    title: "Ana María's Friends",
-                    details: ["My fellow nursing classmates and dear friends.", "We practice medical procedures together and review lectures.", "Teamwork is essential in our study routine."]
-                },
-                w4: {
-                    photo: "img/anamaria-house.jpg",
-                    audio: "audio/anamaria-w4.mp3",
-                    title: "Ana María's Workspace",
-                    details: ["This is my study corner inside my bedroom.", "I prepare my clinical notes and review anatomy diagrams here.", "It provides a tranquil atmosphere for deep concentration."]
+                    title: "Liliana's House & Favorite Area",
+                    details: [
+                        "My Apartment: I live in a small apartment. In my house, there are three bedrooms and one bathroom. There is a comfortable living and dining room, a clean kitchen, and a small office space with a desk to do my homework. Finally, on the rooftop, there is a convenient drying area to hang and dry our clothes.",
+                        "My Favorite Space: The part of the house that I like the most is the living room. In this space, there is a big sofa in front of the television, and there are five comfortable cushions on the sofa. There is a beautiful lamp next to the television, and my dog's bed is to the right of the TV. Near the wall, there is a cabinet where we keep wine glasses and cups. There are music speakers, a comfortable armchair, and family photos on the wall next to a big window."
+                    ]
                 }
             },
             {
@@ -314,25 +245,168 @@
                     photo: "img/carlos-profile.jpg",
                     audio: "audio/carlos-w1.mp3",
                     title: "Carlos's Profile",
-                    details: ["Hi there! I am Carlos.", "I am an active student who enjoys practical learning.", "In my free time, I like playing board games and cooking."]
+                    details: [
+                        "Hello! My name is Carlos, and I am 23 years old.",
+                        "I live in Ventanilla, Peru, and I study Nursing.",
+                        "I am interested in sports and music, which are important parts of my free time.",
+                        "I enjoy discovering new things and developing my knowledge.",
+                        "My goal is to continue learning and growing both personally and academically."
+                    ]
                 },
                 w2: {
                     photo: "img/carlos-family.jpg",
                     audio: "audio/carlos-w2.mp3",
                     title: "Carlos's Family",
-                    details: ["With my parents, Wiler and Luciana.", "They have always guided me through my education.", "We enjoy weekend family gatherings together."]
+                    details: [
+                        "My Parents: My father's name is Wiler. He is 49 years old, and he works as a nurse. He is kind, friendly, and cheerful. My mother's name is Luciana, and she is 50 years old. She is a loving, caring, and supportive person. I appreciate both of my parents because they are important to me.",
+                        "Living at Home: I live with my father, my mother, and my brother. I love my family because we share our home and our daily experiences together. It is very special for us to spend valuable quality time together at home every day."
+                    ]
                 },
                 w3: {
                     photo: "img/carlos-friends.jpg",
                     audio: "audio/carlos-w3.mp3",
                     title: "Carlos's Friends",
-                    details: ["Playing board games like UNO with my best friends.", "Game nights are our favorite way to unwind after exams.", "We always have a great time competing together."]
+                    details: [
+                        "My Best Friend: My best friend's name is Fernando. He is 48 years old. He is a cool, responsible, hardworking, kind, and funny person. He is friendly and enjoys sharing good moments with others. I appreciate his friendship because he makes people feel comfortable and brings happiness to those around him.",
+                        "English Class Team: In my English class, I study with my group. We are a good team. Everyone is very responsible, creative, and supportive. We help each other prepare for our English lessons, and we always practice speaking together to get excellent grades."
+                    ]
                 },
                 w4: {
                     photo: "img/carlos-house.jpg",
                     audio: "audio/carlos-w4.mp3",
-                    title: "Carlos's Kitchen & Dining Area",
-                    details: ["This is the kitchen and dining section of my house.", "I like preparing meals here for my family.", "It is a central gathering area in our home."]
+                    title: "Carlos's House & Living Room",
+                    details: [
+                        "My Home: I live in a comfortable house with different areas for relaxing, preparing meals, and resting. There is a bedroom, a living room, and a kitchen. I believe a home is more than a physical space because it is a place to spend valuable time together.",
+                        "Favorite Space: The living room is a very cozy place in my house. In this space, there is a comfortable sofa and a television. In the bedroom, there is a bed and a wardrobe. In the kitchen, there is a refrigerator, a table, and other useful appliances."
+                    ]
+                }
+            },
+            {
+                id: "anamaria",
+                name: "Ana María",
+                w1: {
+                    photo: "img/anamaria-profile.jpg",
+                    audio: "audio/anamaria-w1.mp3",
+                    title: "Ana María's Profile",
+                    details: [
+                        "I am an 18-year-old nursing student living in Lima, Peru.",
+                        "I am currently in my second semester at Universidad Autónoma del Perú.",
+                        "I consider myself a responsible, kind, and respectful person.",
+                        "I enjoy studying nursing because I like helping and caring for people.",
+                        "I always strive to balance my studies, personal growth, and family life."
+                    ]
+                },
+                w2: {
+                    photo: "img/anamaria-family.jpg",
+                    audio: "audio/anamaria-w2.mp3",
+                    title: "Ana María's Family",
+                    details: [
+                        "My Mother: My mother's name is Seberina. She is 51 years old, and she is from Trujillo, Peru. She is an important person in my life. I love my mother, and I appreciate everything she does for me.",
+                        "Personal Journey: I am a nursing student at Universidad Autónoma del Perú. I am 18 years old, and I live in Lima, Peru. I am responsible, kind, and respectful. I enjoy spending time with my family and studying nursing to help others."
+                    ]
+                },
+                w3: {
+                    photo: "img/anamaria-friends.jpg",
+                    audio: "audio/anamaria-w3.mp3",
+                    title: "Ana María's Friends",
+                    details: [
+                        "My Best Friend: My best friend's name is Yadira. She is a kind, friendly, and funny person. We enjoy talking and spending time together. She is an important person in my life, and I appreciate our friendship.",
+                        "University Classmates: At university, I study nursing with my classmates. We are a good team, and we help each other with our assignments. We study together and practice for our English lessons to get good grades."
+                    ]
+                },
+                w4: {
+                    photo: "img/anamaria-house.jpg",
+                    audio: "audio/anamaria-w4.mp3",
+                    title: "Ana María's House & Bedroom",
+                    details: [
+                        "My House: I live in Lima, Peru. My home is a special place for me because I can relax and spend time with my family. It is also a place where I can study and do my homework.",
+                        "Favorite Space: The part of my house that I like the most is my bedroom. It is a comfortable place where I can rest, listen to music, and study. I like my bedroom because it gives me peace and privacy."
+                    ]
+                }
+            },
+            {
+                id: "massiel",
+                name: "Massiel",
+                w1: {
+                    photo: "img/massiel-profile.jpg",
+                    audio: "audio/massiel-w1.mp3",
+                    title: "Massiel's Profile",
+                    details: [
+                        "Hello! My name is Massiel Xiomara Vasquez Montalvo, and I am 20 years old.",
+                        "I live in Peru, and I study Systems Engineering.",
+                        "I am interested in listening to all kinds of music in my free time.",
+                        "I always strive to balance continuous learning, creativity, and student life.",
+                        "My goal is to continue learning and growing both personally and academically."
+                    ]
+                },
+                w2: {
+                    photo: "img/massiel-family.jpg",
+                    audio: "audio/massiel-w2.mp3",
+                    title: "Massiel's Family",
+                    details: [
+                        "My Family & Grandparents: My father's name is Jorge Eduardo, and he is a driver. My mother's name is Ana Paola, and she is a housewife. They are wonderful parents who take care of our home. My grandfather's name is Emiliano Vasquez, and he loves family outings. My grandmother's name is Matilde Piña, and she loves to spoil us.",
+                        "Family Bond: I am very close to my family, and we love to share quality time together. On weekends, we enjoy spending time with my parents and grandparents to have a special lunch and share daily experiences."
+                    ]
+                },
+                w3: {
+                    photo: "img/massiel-friends.jpg",
+                    audio: "audio/massiel-w3.mp3",
+                    title: "Massiel's Friends",
+                    details: [
+                        "My Best Friends: My best friends are Erick and Noemi. Erick has a great sense of humor; he is kind, friendly, and a bit sarcastic, but an amazing friend! Noemi is a very good listener, supportive, and trustworthy. We enjoy spending quality time together.",
+                        "Group 5 Teamwork: In my English class, I study with my group. We are a good team. Everyone is very responsible, creative, and supportive. We help each other prepare for our English lessons to get excellent grades."
+                    ]
+                },
+                w4: {
+                    photo: "img/massiel-house.jpg",
+                    audio: "audio/massiel-w4.mp3",
+                    title: "Massiel's House & Living Room",
+                    details: [
+                        "My Home: I live in a small but very cozy house. In my house, there are bedrooms, a bathroom, a clean kitchen, and a living room. There is also a small study area with a desk to do my homework and study Systems Engineering.",
+                        "Favorite Space: The part of the house that I like the most is the living room. In this space, there is a comfortable sofa in front of the TV. Near the wall, there are music speakers to listen to my favorite songs, and beautiful family photos on the wall."
+                    ]
+                }
+            },
+            {
+                id: "jhan",
+                name: "Jhan Franco",
+                w1: {
+                    photo: "img/jhan-profile.jpg",
+                    audio: "audio/jhan-w1.mp3",
+                    title: "Jhan Franco's Profile",
+                    details: [
+                        "Hi, my name is Jhan Franco.",
+                        "I am an enthusiastic university student.",
+                        "I like technology, sports, and collaborative team assignments.",
+                        "I always strive to learn new skills and share ideas with my group."
+                    ]
+                },
+                w2: {
+                    photo: "img/jhan-family.jpg",
+                    audio: "audio/jhan-w2.mp3",
+                    title: "Jhan Franco's Family",
+                    details: [
+                        "Sunday Lunch: This photo shows our family Sunday lunch.",
+                        "We love sharing meal times and catching up on everyone's week. My family is my biggest motivation."
+                    ]
+                },
+                w3: {
+                    photo: "img/jhan-friends.jpg",
+                    audio: "audio/jhan-w3.mp3",
+                    title: "Jhan Franco's Friends",
+                    details: [
+                        "Cousins & Friends: Hanging out with my cousins and close friends.",
+                        "We share hobbies like gaming and outdoor sports. They always bring energy and fun to my life."
+                    ]
+                },
+                w4: {
+                    photo: "img/jhan-house.jpg",
+                    audio: "audio/jhan-w4.mp3",
+                    title: "Jhan Franco's Living Room",
+                    details: [
+                        "Living Room: This is the main living room in my house.",
+                        "It is a comfortable space where my family relaxes together to watch movies and celebrate events."
+                    ]
                 }
             }
         ];
@@ -349,10 +423,9 @@
                         </div>
                         <div class="p-5">
                             <h3 class="font-serif font-bold text-xl text-autumn-900 dark:text-autumn-100 mb-2">${m.name}</h3>
-                            <ul class="space-y-1.5 text-xs text-autumn-700 dark:text-autumn-300 mb-4">
-                                ${m.w1.details.map(d => `<li class="flex items-start gap-2"><i class="fa-solid fa-angle-right text-pumpkin mt-0.5"></i> <span>${d}</span></li>`).join('')}
+                            <ul class="space-y-2 text-xs text-autumn-700 dark:text-autumn-300 mb-4">
+                                ${m.w1.details.map(d => `<li class="flex items-start gap-2"><i class="fa-solid fa-angle-right text-pumpkin mt-0.5 shrink-0"></i> <span>${d}</span></li>`).join('')}
                             </ul>
-                            <!-- Reproductor de Audio -->
                             <div class="mt-3 pt-3 border-t border-autumn-200 dark:border-autumn-800">
                                 <span class="text-[10px] uppercase font-bold text-pumpkin tracking-wider block mb-1"><i class="fa-solid fa-volume-high mr-1"></i> Audio Pronunciation</span>
                                 <audio controls class="w-full h-8 text-xs">
@@ -382,16 +455,15 @@
 
             contentContainer.innerHTML = `
                 <div class="glass-card rounded-2xl p-6 border border-autumn-300/60 dark:border-autumn-700/60 shadow-lg grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div class="md:col-span-6 h-72 rounded-xl overflow-hidden bg-autumn-200/40 dark:bg-neutral-900">
+                    <div class="md:col-span-6 h-80 rounded-xl overflow-hidden bg-autumn-200/40 dark:bg-neutral-900">
                         <img src="${data.photo}" alt="${data.title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80';" />
                     </div>
                     <div class="md:col-span-6 space-y-4">
                         <span class="text-xs font-bold text-pumpkin uppercase tracking-widest">${currentMember.name}</span>
                         <h3 class="font-serif text-2xl font-bold text-autumn-900 dark:text-autumn-100">${data.title}</h3>
-                        <ul class="space-y-2 text-sm text-autumn-700 dark:text-autumn-300">
-                            ${data.details.map(d => `<li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-sage mt-1"></i> <span>${d}</span></li>`).join('')}
+                        <ul class="space-y-3 text-sm text-autumn-700 dark:text-autumn-300">
+                            ${data.details.map(d => `<li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-sage mt-1 shrink-0"></i> <span>${d}</span></li>`).join('')}
                         </ul>
-                        <!-- Reproductor de Audio para Semanas 2, 3 y 4 -->
                         <div class="pt-4 border-t border-autumn-200 dark:border-autumn-800">
                             <span class="text-xs uppercase font-bold text-pumpkin tracking-wider block mb-1.5"><i class="fa-solid fa-volume-high mr-1"></i> Listen to Audio Description</span>
                             <audio controls class="w-full h-9">
@@ -417,6 +489,11 @@
             } else {
                 icon.className = 'fa-solid fa-moon';
             }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         }
 
         document.addEventListener("DOMContentLoaded", () => {
