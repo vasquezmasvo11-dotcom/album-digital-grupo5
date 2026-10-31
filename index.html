@@ -192,7 +192,7 @@
         </div>
     </footer>
 
-    <!-- LÓGICA DE DATOS CON TEXTO EXACTO Y RUTAS DE 20 IMÁGENES -->
+    <!-- LÓGICA DE DATOS Y RENDERIZADO -->
     <script>
         const membersData = [
             {
@@ -358,16 +358,18 @@
                     photo: "img/jhan-profile.jpg",
                     title: "Jhan Franco's Profile",
                     details: [
-                        "My name is jhan franco briones leiva; I am 20 years old and live in the Carabayllo  district.
-                        I am studying software engineering, and I work  independently alongside my mother and my aunt at a restaurant. 
-                        I am very fond of music, reading, writing, creating fictional stories, and watching movies. I am very interested in learning how to build applications and in mastering various programming languages. Cooking is also one of my greatest interest; I love the culinary arts, as well as every dish prepared by my aunt, who is a chef"
+                        "My name is jhan franco briones leiva; I am 20 years old and live in the Carabayllo district.",
+                        "I am studying software engineering, and I work independently alongside my mother and my aunt at a restaurant.",
+                        "I am very fond of music, reading, writing, creating fictional stories, and watching movies.",
+                        "I am very interested in learning how to build applications and in mastering various programming languages.",
+                        "Cooking is also one of my greatest interest; I love the culinary arts, as well as every dish prepared by my aunt, who is a chef."
                     ]
                 },
                 w2: {
                     photo: "img/jhan-family.jpg",
                     title: "Jhan Franco's Family",
                     details: [
-                        "Now I will talk about my family. I live with my mother, Julia, who is 41  years old; she is self employed and works alongside my aunt, who also lives in the Carabayllo area. My father name is Denis, he is 43 years old and works for a food company. I am an only child, but my aunt and her family live very close by, and I grew up with my cousins as if they were my own siblings",
+                        "Now I will talk about my family. I live with my mother, Julia, who is 41 years old; she is self employed and works alongside my aunt, who also lives in the Carabayllo area. My father name is Denis, he is 43 years old and works for a food company. I am an only child, but my aunt and her family live very close by, and I grew up with my cousins as if they were my own siblings.",
                         "Most of my family lives nearby, with the exception of two uncles who live in the san Miguel area; both are still single and self employed but we all get together every Sunday for a family gathering. My grandparents are from ancash, and their eldest son also lives there with his family; at Christmas, they come to lima to visit so that we can all be together and share moments as a family."
                     ]
                 },
@@ -375,16 +377,16 @@
                     photo: "img/jhan-friends.jpg",
                     title: "Jhan Franco's Friends",
                     details: [
-                        "My cousins are my best friends; with them, there’s always laugther and gossip, and we often help each other out with problems related to school or university. Anny is like a sister tome. I grew up with her for most of my childhood, and this year she’s graduating. Jarry is 18 now and is good at math, so he sometimes helps me with that, while I help him with subjects like literature or language. My younger cousins often stop by to see my mom, who treats them as if they were her own children. ",
-                        "Beyond being family, they are truly my best friends; I know I can count on them, and they can always rely on me for whatever they need. On the other hand, I also made friends at university; at least two or three of my peers have earned my trust, as we share the same tastes and interests. "
+                        "My cousins are my best friends; with them, there’s always laugther and gossip, and we often help each other out with problems related to school or university. Anny is like a sister tome. I grew up with her for most of my childhood, and this year she’s graduating. Jarry is 18 now and is good at math, so he sometimes helps me with that, while I help him with subjects like literature or language. My younger cousins often stop by to see my mom, who treats them as if they were her own children.",
+                        "Beyond being family, they are truly my best friends; I know I can count on them, and they can always rely on me for whatever they need. On the other hand, I also made friends at university; at least two or three of my peers have earned my trust, as we share the same tastes and interests."
                     ]
                 },
                 w4: {
                     photo: "img/jhan-house.jpg",
                     title: "Jhan Franco's Living Room",
                     details: [
-                        "In our home, we have a living room, a kitchen, a bathroom with a shower, and three bedrooms. We also have three refrigerators, as we sell water, ice pops(popular due to the daily heat), gelatin, and beer. We have two stoves:one industrial-grade and one  standard household  stove, which we use for boiling water of baking cakes in the oven. ",
-                        "In the living room, there is a dining table where we eat, as well as as single television, which is mounted on a column using a tv wall mount. We also have a kitchen cabinet for sotirng plates, glasess ,cups and utensils. I have a desk where I do my university coursework. "
+                        "In our home, we have a living room, a kitchen, a bathroom with a shower, and three bedrooms. We also have three refrigerators, as we sell water, ice pops(popular due to the daily heat), gelatin, and beer. We have two stoves: one industrial-grade and one standard household stove, which we use for boiling water of baking cakes in the oven.",
+                        "In the living room, there is a dining table where we eat, as well as as single television, which is mounted on a column using a tv wall mount. We also have a kitchen cabinet for sotirng plates, glasess ,cups and utensils. I have a desk where I do my university coursework."
                     ]
                 }
             }
@@ -441,27 +443,26 @@
             `;
         }
 
-        function switchTab(weekKey, idx) {
-            activeTabs[weekKey] = idx;
-            renderTabbedSection(weekKey, `${weekKey}-content-container`, `${weekKey}-tabs`);
+        function switchTab(weekKey, index) {
+            activeTabs[weekKey] = index;
+            if (weekKey === 'w2') renderTabbedSection('w2', 'w2-content-container', 'w2-tabs');
+            if (weekKey === 'w3') renderTabbedSection('w3', 'w3-content-container', 'w3-tabs');
+            if (weekKey === 'w4') renderTabbedSection('w4', 'w4-content-container', 'w4-tabs');
         }
 
         function toggleDarkMode() {
-            document.documentElement.classList.toggle('dark');
-            const icon = document.getElementById('theme-icon');
-            if (document.documentElement.classList.contains('dark')) {
-                icon.className = 'fa-solid fa-sun';
+            const html = document.documentElement;
+            const icon = document.getElementById("theme-icon");
+            html.classList.toggle("dark");
+            if (html.classList.contains("dark")) {
+                icon.className = "fa-solid fa-sun";
             } else {
-                icon.className = 'fa-solid fa-moon';
+                icon.className = "fa-solid fa-moon";
             }
         }
 
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
+        // Inicialización
+        window.addEventListener("DOMContentLoaded", () => {
             renderWeek1();
             renderTabbedSection('w2', 'w2-content-container', 'w2-tabs');
             renderTabbedSection('w3', 'w3-content-container', 'w3-tabs');
